@@ -31,6 +31,8 @@
   <link rel="stylesheet"
     href="https://www.w3schools.com/w3css/4/w3.css"
     type="text/css" />
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <style>
     .mySlides {
       display: none
@@ -42,7 +44,7 @@
 <body>
   <!--The header element will contain the heading fror the web page-->
   <header class="w3-container w3-dark-grey w3-mobile">
-    <h1 class="">The Haukai restaraunt</h1>
+    <h1 id="header">The Haukai restaraunt</h1>
   </header>
   <!--The nav element will be a container for the navigation bar it uses w3 bar class-->
   <nav class="w3-bar w3-light-grey w3-mobile">
@@ -53,8 +55,23 @@
       class="w3-bar-item w3-button">Contact</a>
     <a href="hours.html"
       class="w3-bar-item w3-button">Hours</a>
-    <a href="menu.html "
-      class="w3-bar-item w3-button w3-grey">Menu</a>
+    <div class="w3-dropdown-hover">
+      <button class="w3-button">Menu <i class="fa fa-caret-down"></i></button>
+      <div class="w3-dropdown-content w3-bar-block w3-white w3-card-4">
+        <a href="#appitizers"
+          class="w3-bar-item w3-button">Appitizers</a>
+        <a href="#main"
+          class="w3-bar-item w3-button">Main</a>
+        <a href="#dessert"
+          class="w3-bar-item w3-button">Dessert</a>
+        <a href="#winelist"
+          class="w3-bar-item w3-button">Wine List</a>
+        <a href="#beerAndCider"
+          class="w3-bar-item w3-button">Beer and Cider</a>
+        <a href="#nonalchoholic"
+          class="w3-bar-item w3-button">Non-Alchoholic Drinks</a>
+      </div>
+    </div>
     <a href="reservations.html"
       class="w3-bar-item w3-button">Reservations</a>
     <a href="privacy.html"
@@ -90,7 +107,7 @@
     </div>
     <!-- Tables are read from left to right. top to bottom. A screen reader will see the h2 tag first read this then move in to the table. the table from left to right says what the menu item is then a desciption of the meal/item then what it costs. this is a logical menu structure represented by the table tag -->
     <div class="w3-container w3-mobile w3-center w3-card ">
-      <h3 class="">Appitizers</h3>
+      <h3 id="appitizers">Appitizers</h3>
       <table class="w3-table ">
         <thead>
           <tr>
@@ -126,11 +143,13 @@
           <td class="w3-right-align">25</td>
         </tr>
       </table>
-      <hr>
+      <a href="#header"
+        class="w3-button w3-round-xxlarge w3-border w3-border-dark-gray">Back to top</a>
+      <p></p>
     </div>
     <br>
     <div class="w3-container w3-mobile w3-center w3-card">
-      <h3>Main</h3>
+      <h3 id="main">Main</h3>
       <table class="w3-table">
         <thead>
           <tr>
@@ -171,11 +190,13 @@
           <td class="w3-right-align">33</td>
         </tr>
       </table>
-      <hr>
+      <a href="#header"
+        class="w3-button w3-round-xxlarge w3-border w3-border-dark-gray">Back to top</a>
+      <p></p>
     </div>
     <br>
     <div class="w3-container w3-mobile w3-center w3-card">
-      <h3>Dessert</h3>
+      <h3 id="dessert">Dessert</h3>
       <table class="w3-table">
         <thead>
           <tr>
@@ -205,12 +226,14 @@
           <td class="w3-right-align">16</td>
         </tr>
       </table>
-      <hr>
+      <a href="#header"
+        class="w3-button w3-round-xxlarge w3-border w3-border-dark-gray">Back to top</a>
+      <p></p>
     </div>
     <br>
     <h2 class="">Drinks</h2>
     <div class="w3-container w3-mobile w3-center w3-card">
-      <h3>Wine List</h3>
+      <h3 id="winelist">Wine List</h3>
       <!-- im not sure someone using a screen reader will get the best from the drinks menu. There needs to be some way to add more descriptions to the table elements -->
       <table class="w3-table">
         <thead>
@@ -295,11 +318,13 @@
           </tr>
         </table>
       </div>
-      <hr>
+      <a href="#header"
+        class="w3-button w3-round-xxlarge w3-border w3-border-dark-gray">Back to top</a>
+      <p></p>
     </div>
     <br>
     <div class="w3-container w3-mobile w3-center w3-card">
-      <h3>Beer and Cider</h3>
+      <h3 id="beerAndCider">Beer and Cider</h3>
       <table class="w3-table w3-center">
         <thead>
           <tr>
@@ -336,11 +361,13 @@
           <td class="w3-right-align">10</td>
         </tr>
       </table>
-      <hr>
+      <a href="#header"
+        class="w3-button w3-round-xxlarge w3-border w3-border-dark-gray">Back to top</a>
+      <p></p>
     </div>
     <br>
     <div class="w3-container w3-mobile w3-center w3-card">
-      <h3>Non-Alchoholic</h3>
+      <h3 id="nonalchoholic">Non-Alchoholic</h3>
       <table class="w3-table w3-center">
         <thead>
           <tr>
@@ -369,6 +396,9 @@
           <td class="w3-right-align">3.50</td>
         </tr>
       </table>
+      <a href="#header"
+        class="w3-button w3-round-xxlarge w3-border w3-border-dark-gray">Back to top</a>
+      <p></p>
     </div>
     <br>
   </main>
