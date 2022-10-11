@@ -31,6 +31,8 @@
   <link rel="stylesheet"
     href="https://www.w3schools.com/w3css/4/w3.css"
     type="text/css" />
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <!--This will contain the body of the home page it will use the semantic tags header nav main and footer for easy navigation by screen readers-->
 
 <body>
@@ -38,22 +40,49 @@
   <header class="w3-container w3-dark-grey w3-mobile">
     <h1>The Haukai restaraunt</h1>
   </header>
-  <!--The nav element will be a container for the navigation bar it uses w3 bar class-->
-  <nav class="w3-bar w3-light-grey w3-mobile">
-    <!--The anchor elemnts in this list use w3 class-->
-    <a href="/home.html"
-      class="w3-bar-item w3-button ">Home</a>
-    <a href="contact.html"
-      class="w3-bar-item w3-button">Contact</a>
-    <a href="hours.html"
-      class="w3-bar-item w3-button w3-grey">Hours</a>
-    <a href="menu.html "
-      class="w3-bar-item w3-button">Menu</a>
-    <a href="reservations.html"
-      class="w3-bar-item w3-button">Reservations</a>
-    <a href="privacy.html"
-      class="w3-bar-item w3-button">Privacy Statement</a>
-
+  <nav>
+    <!-- menu bar for small and large screens -->
+    <!--  -->
+    <div class="w3-bar w3-light-grey">
+      <!-- anchor for the menu bar on the small screen, inside this div so it is level with the home button when the screen is small -->
+      <!-- code for this button from w3-schools start page template. https://www.w3schools.com/w3css/w3css_templates.asp -->
+      <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-large"
+        href="javascript:void(0);"
+        onclick="myFunction()"
+        title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+      <!--The anchor elemnts for the large screens-->
+      <a href="home.html"
+        class="w3-bar-item w3-button w3-grey">Home</a>
+      <a href="pages/contact.html"
+        class="w3-bar-item w3-button w3-mobile w3-hide-small">Contact</a>
+      <a href="pages/hours.html"
+        class="w3-bar-item w3-button w3-mobile w3-hide-small">Hours</a>
+      <a href="pages/menu.html"
+        class="w3-bar-item w3-button w3-mobile w3-hide-small">Menu</a>
+      <a href="pages/reservations.html"
+        class="w3-bar-item w3-button w3-mobile w3-hide-small">Reservations</a>
+      <a href="pages/privacy.html"
+        class="w3-bar-item w3-button w3-mobile w3-hide-small ">Privacy Statement</a>
+      <a href="/private/private.html"
+        class="w3-bar-item w3-button w3-mobile w3-hide-small">Staff Portal<a>
+    </div>
+    <!-- Navbar on small screens -->
+    <!-- we can see the div that wraps the anchors has hide large and medium, everything inside this wrapper is hidden. -->
+    <div id="navDemo"
+      class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium w3-large">
+      <a href="pages/contact.html"
+        class="w3-bar-item w3-button w3-padding-large">Contact</a>
+      <a href="pages/hours.html"
+        class="w3-bar-item w3-button w3-padding-large">Hours</a>
+      <a href="pages/menu.html"
+        class="w3-bar-item w3-button w3-padding-large">Menu</a>
+      <a href="pages/reservations.html"
+        class="w3-bar-item w3-button w3-padding-large">Reservations</a>
+      <a href="pages/privacy.html"
+        class="w3-bar-item w3-button w3-padding-large">Privacy Statement</a>
+      <a href="/private/private.html"
+        class="w3-bar-item w3-button w3-padding-large">Staff Portal</a>
+    </div>
   </nav>
   <!--The main element is a container for the content of the webpage -->
   <main class="w3-container w3-light-grey w3-mobile">
@@ -101,7 +130,17 @@
          w3-grey">Privacy Statement</a> </p>
     <p></p>
   </footer>
-
+  <script>
+    // Used to toggle the menu on small screens when clicking on the menu button
+    function myFunction() {
+      var x = document.getElementById("navDemo");
+      if (x.className.indexOf("w3-show") == -1) {
+        x.className += " w3-show";
+      } else {
+        x.className = x.className.replace(" w3-show", "");
+      }
+    }
+  </script>
 </body>
 
 </html>
