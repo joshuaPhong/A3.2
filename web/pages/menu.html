@@ -47,6 +47,65 @@
     <h1 id="header">The Haukai restaraunt</h1>
   </header>
   <!--The nav element will be a container for the navigation bar it uses w3 bar class-->
+  <nav>
+    <!-- menu bar for small and large screens -->
+    <!--  -->
+    <div class="w3-bar w3-light-grey">
+      <!-- anchor for the menu bar on the small screen, inside this div so it is level with the home button when the screen is small -->
+      <!-- code for this button from w3-schools start page template. https://www.w3schools.com/w3css/w3css_templates.asp -->
+      <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-large"
+        href="javascript:void(0);"
+        onclick="myFunction()"
+        title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+      <!--The anchor elemnts for the large screens-->
+      <a href="home.html"
+        class="w3-bar-item w3-button w3-grey">Home</a>
+      <a href="pages/contact.html"
+        class="w3-bar-item w3-button w3-mobile w3-hide-small">Contact</a>
+      <a href="pages/hours.html"
+        class="w3-bar-item w3-button w3-mobile w3-hide-small">Hours</a>
+      <a href="pages/menu.html"
+        class="w3-bar-item w3-button w3-mobile w3-hide-small">Menu</a>
+      <a href="pages/reservations.html"
+        class="w3-bar-item w3-button w3-mobile w3-hide-small">Reservations</a>
+      <a href="pages/privacy.html"
+        class="w3-bar-item w3-button w3-mobile w3-hide-small ">Privacy Statement</a>
+      <a href="/private/private.html"
+        class="w3-bar-item w3-button w3-mobile w3-hide-small">Staff Portal<a>
+    </div>
+    <!-- Navbar on small screens -->
+    <!-- we can see the div that wraps the anchors has hide large and medium, everything inside this wrapper is hidden. -->
+    <div id="navDemo"
+      class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium w3-large">
+      <a href="pages/contact.html"
+        class="w3-bar-item w3-button w3-padding-large">Contact</a>
+      <a href="pages/hours.html"
+        class="w3-bar-item w3-button w3-padding-large">Hours</a>
+      <div class="w3-dropdown-hover">
+        <button class="w3-button">Menu <i class="fa fa-caret-down"></i></button>
+        <div class="w3-dropdown-content w3-bar-block w3-white w3-card-4">
+          <a href="#appitizers"
+            class="w3-bar-item w3-button">Appitizers</a>
+          <a href="#main"
+            class="w3-bar-item w3-button">Main</a>
+          <a href="#dessert"
+            class="w3-bar-item w3-button">Dessert</a>
+          <a href="#winelist"
+            class="w3-bar-item w3-button">Wine List</a>
+          <a href="#beerAndCider"
+            class="w3-bar-item w3-button">Beer and Cider</a>
+          <a href="#nonalchoholic"
+            class="w3-bar-item w3-button">Non-Alchoholic Drinks</a>
+        </div>
+      </div>
+      <a href="pages/reservations.html"
+        class="w3-bar-item w3-button w3-padding-large">Reservations</a>
+      <a href="pages/privacy.html"
+        class="w3-bar-item w3-button w3-padding-large">Privacy Statement</a>
+      <a href="/private/private.html"
+        class="w3-bar-item w3-button w3-padding-large">Staff Portal</a>
+    </div>
+  </nav>
   <nav class="w3-bar w3-light-grey w3-mobile">
     <!--The anchor elemnts in this list use w3 class-->
     <a href="/home.html"
@@ -424,6 +483,17 @@
       if (myIndex > x.length) { myIndex = 1 }
       x[myIndex - 1].style.display = "block";
       setTimeout(carousel, 2000); // Change image every 2 seconds
+    }
+  </script>
+  <script>
+    // Used to toggle the menu on small screens when clicking on the menu button
+    function myFunction() {
+      var x = document.getElementById("navDemo");
+      if (x.className.indexOf("w3-show") == -1) {
+        x.className += " w3-show";
+      } else {
+        x.className = x.className.replace(" w3-show", "");
+      }
     }
   </script>
 </body>
