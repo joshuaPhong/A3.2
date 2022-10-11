@@ -1,9 +1,11 @@
-<!-- testing git push again -->
+<!-- joshua fox 5021619-->
 <!DOCTYPE html>
 <html lang="en-NZ">
 
 <head>
     <meta charset="utf-8" />
+    <title>The Haukai restaraunt home page</title>
+    <!-- gtag is for embedding the analytics -->
     <!-- Google tag (gtag.js) -->
     <script async
         src="https://www.googletagmanager.com/gtag/js?id=G-XM3ZK9H4L7"></script>
@@ -14,7 +16,7 @@
 
         gtag('config', 'G-XM3ZK9H4L7');
     </script>
-    <title>The Haukai restaraunt home page</title>
+<!-- all the meta tags -->
     <meta name="Haukai restaraunt website"
         content="This is the home page for the restaraunt" />
     <meta name="author"
@@ -25,6 +27,7 @@
         content='The Haukai restaurant Kerikeri with local and Maori menu'>.
     <meta name="keywords"
         content="Haukai, Restaurant, Kerikeri, Menu" />
+        <!-- links for the w3-framework and for the icons used in the menu items -->
     <link rel="stylesheet"
         href="https://www.w3schools.com/w3css/4/w3.css"
         type="text/css" />
@@ -43,19 +46,22 @@ ARIA in HTML W3C Recommendation 09 December 2021 https://www.w3.org/TR/html-aria
 <!-- this is implimented throughout all the web [pages] -->
 
 <body>
-    <!--The header element will contain the heading fror the web page-->
+    <!--The header element will contain the heading for the web page-->
     <header class="w3-container w3-dark-grey w3-mobile">
         <h1>The Haukai restaraunt testing edge devtools</h1>
     </header>
-    <!--The nav element will be a container for the navigation bar it uses w3 bar class-->
+    <!--The nav tag is a semantic element for screen readers used here to wrap the navigation divs-->
     <nav>
-        <!-- menu bar for small screens with an on click function -->
+        <!-- menu bar for small and large screens -->
+        <!--  -->
         <div class="w3-bar w3-light-grey">
+            <!-- anchor for the menu bar on the small screen, inside this div so it is level with the home button when the screen is small -->
+            <!-- code for this button from w3-schools start page template. https://www.w3schools.com/w3css/w3css_templates.asp -->
             <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-large"
                 href="javascript:void(0);"
                 onclick="myFunction()"
                 title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
-            <!--The anchor elemnts in this list use w3 class-->
+            <!--The anchor elemnts for the large screens-->
             <a href="home.html"
                 class="w3-bar-item w3-button w3-grey">Home</a>
             <a href="pages/contact.html"
@@ -72,6 +78,7 @@ ARIA in HTML W3C Recommendation 09 December 2021 https://www.w3.org/TR/html-aria
                 class="w3-bar-item w3-button w3-mobile w3-hide-small">Staff Portal<a>
         </div>
         <!-- Navbar on small screens -->
+        <!-- we can see the div that wraps the anchors has hide large and medium, everything inside this wrapper is hidden. -->
         <div id="navDemo"
             class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium w3-large">
             <a href="pages/contact.html"
@@ -107,12 +114,14 @@ ARIA in HTML W3C Recommendation 09 December 2021 https://www.w3.org/TR/html-aria
     <!--The footer container will contain the copyright and author information-->
     <footer class="w3-container w3-dark-grey w3-mobile">
         <p>&copy; The Haukai Restaraunt.
+            <!-- an anchor to the privacy statment page -->
             <a href="/pages/privacy.html"
                 class="w3-button w3-round w3-round-xxlarge
          w3-grey">Privacy Statement</a>
             </a>
         </p>
     </footer>
+    <!-- scri[t from w3-schools templates used in the small screen menu to open the links] -->
     <script>
         // Used to toggle the menu on small screens when clicking on the menu button
         function myFunction() {
