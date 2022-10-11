@@ -30,6 +30,8 @@
     <link rel="stylesheet"
         href="https://www.w3schools.com/w3css/4/w3.css"
         type="text/css" />
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <!-- Preload the LCP image with a high fetchpriority so it starts loading with the stylesheet. -->
     <link rel="preload"
         fetchpriority="high"
@@ -45,25 +47,48 @@ ARIA in HTML W3C Recommendation 09 December 2021 https://www.w3.org/TR/html-aria
 <body>
     <!--The header element will contain the heading fror the web page-->
     <header class="w3-container w3-dark-grey w3-mobile">
-        <h1>The Haukai restaraunt</h1>
+        <h1>The Haukai restaraunt testing edge devtools</h1>
     </header>
     <!--The nav element will be a container for the navigation bar it uses w3 bar class-->
-    <nav class="w3-bar w3-light-grey w3-mobile w3-padding">
-        <!--The anchor elemnts in this list use w3 class-->
-        <a href="home.html"
-            class="w3-bar-item w3-button w3-grey">Home</a>
-        <a href="pages/contact.html"
-            class="w3-bar-item w3-button">Contact</a>
-        <a href="pages/hours.html"
-            class="w3-bar-item w3-button">Hours</a>
-        <a href="pages/menu.html "
-            class="w3-bar-item w3-button">Menu</a>
-        <a href="pages/reservations.html"
-            class="w3-bar-item w3-button">Reservations</a>
-        <a href="pages/privacy.html"
-            class="w3-bar-item w3-button">Privacy Statement</a>
-        <a href="/private/private.html"
-            class="w3-bar-item w3-button">Staff Portal</a>
+    <nav>
+        <!-- menu bar for small screens with an on click function -->
+        <div class="w3-bar w3-light-grey">
+            <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right"
+                href="javascript:void(0);"
+                onclick="myFunction()"
+                title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+            <!--The anchor elemnts in this list use w3 class-->
+            <a href="home.html"
+                class="w3-bar-item w3-button w3-grey">Home</a>
+            <a href="pages/contact.html"
+                class="w3-bar-item w3-button w3-mobile w3-hide-small">Contact</a>
+            <a href="pages/hours.html"
+                class="w3-bar-item w3-button w3-mobile w3-hide-small">Hours</a>
+            <a href="pages/menu.html"
+                class="w3-bar-item w3-button w3-mobile w3-hide-small">Menu</a>
+            <a href="pages/reservations.html"
+                class="w3-bar-item w3-button w3-mobile w3-hide-small">Reservations</a>
+            <a href="pages/privacy.html"
+                class="w3-bar-item w3-button w3-mobile w3-hide-small ">Privacy Statement</a>
+            <a href="/private/private.html"
+                class="w3-bar-item w3-button w3-mobile w3-hide-small">Staff Portal<a>
+        </div>
+        <!-- Navbar on small screens -->
+        <div id="navDemo"
+            class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium w3-large">
+            <a href="pages/contact.html"
+                class="w3-bar-item w3-button w3-padding-large">Contact</a>
+            <a href="pages/hours.html"
+                class="w3-bar-item w3-button w3-padding-large">Hours</a>
+            <a href="pages/menu.html"
+                class="w3-bar-item w3-button w3-padding-large">Menu</a>
+            <a href="pages/reservations.html"
+                class="w3-bar-item w3-button w3-padding-large">Reservations</a>
+            <a href="pages/privacy.html"
+                class="w3-bar-item w3-button w3-padding-large">Privacy Statement</a>
+            <a href="/private/private.html"
+                class="w3-bar-item w3-button w3-padding-large">Staff Portal</a>
+        </div>
     </nav>
     <!--The main element is a container for the content of the webpage-->
     <main class="w3-container w3-light-grey w3-mobile">
@@ -90,4 +115,15 @@ ARIA in HTML W3C Recommendation 09 December 2021 https://www.w3.org/TR/html-aria
             </a>
         </p>
     </footer>
+    <script>
+        // Used to toggle the menu on small screens when clicking on the menu button
+        function myFunction() {
+            var x = document.getElementById("navDemo");
+            if (x.className.indexOf("w3-show") == -1) {
+                x.className += " w3-show";
+            } else {
+                x.className = x.className.replace(" w3-show", "");
+            }
+        }
+    </script>
 </body>
