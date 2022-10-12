@@ -27,6 +27,8 @@
         content='The Haukai restaurant Kerikeri with local and Maori menu'>.
     <meta name="keywords"
         content="Haukai, Restaurant, Kerikeri, Menu" />
+    <meta name="google-site-verification"
+        content="Zm_4zYnQoXhIIHP8LhUAJDMYMQIkKbPvkWEoPT074hs" />
     <!-- links for the w3-framework and for the icons used in the menu items -->
     <link rel="stylesheet"
         href="https://www.w3schools.com/w3css/4/w3.css"
@@ -79,7 +81,7 @@ ARIA in HTML W3C Recommendation 09 December 2021 https://www.w3.org/TR/html-aria
         </div>
         <!-- Navbar on small screens -->
         <!-- we can see the div that wraps the anchors has hide large and medium, everything inside this wrapper is hidden. -->
-        <div id="navDemo"
+        <div id="nav"
             class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium w3-large">
             <a href="pages/contact.html"
                 class="w3-bar-item w3-button w3-padding-large">Contact</a>
@@ -125,7 +127,7 @@ ARIA in HTML W3C Recommendation 09 December 2021 https://www.w3.org/TR/html-aria
     <script>
         // Used to toggle the menu on small screens when clicking on the menu button
         function myFunction() {
-            var x = document.getElementById("navDemo");
+            var x = document.getElementById("nav");
             if (x.className.indexOf("w3-show") == -1) {
                 x.className += " w3-show";
             } else {
